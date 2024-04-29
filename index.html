@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+</head>
+<body>
+    <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-dark p-4">
+            <h4 class="text-white">Collapsed content</h4>
+            <span class="text-muted">Toggleable via the navbar brand.</span>
+          </div>
+        </div>
+        <nav class="navbar">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="Menu"><g fill="#ffffff" class="color000000 svgShape"><g fill="#ffffff" class="color000000 svgShape"><rect width="18" height="2" x="3" y="11" rx=".95" ry=".95" fill="#ffffff" class="color000000 svgShape"></rect><rect width="18" height="2" x="3" y="16" rx=".95" ry=".95" fill="#ffffff" class="color000000 svgShape"></rect><rect width="18" height="2" x="3" y="6" rx=".95" ry=".95" fill="#ffffff" class="color000000 svgShape"></rect></g></g></svg></span>
+          </button>
+          <div class="Logo">
+            <h3 style="    font-size: 20px;font-weight: 700;line-height: 24px;">Logo</h3>
+          </div>
+        </nav>
+    </div>
+    <div id="makepdf">
+        <div class="naman-img">
+            <img id="profile-img" src="./naman.jpeg" alt="naman-img"/>
+        </div>
+        <div class="description">
+            <h3 style="color: #22272F;line-height:33.6px;">Naman Narayan</h3>
+            <button id="generatePDF" class="save-contact"><img src="./svg/Download.svg">Save contact</button>
+            <h4>Managing Director</h4>
+            <div class="line1"><img src="./svg/s.svg" alt="s-svg"/>Tech Curve AI & Innovations 
+                <a href="#"><img src="./svg/Open.svg" alt="open" style="cursor: pointer;"/></a> 
+                <p><img src="./svg/mdi_location.svg"/> Bangkok, Thailand</p></div>
+            </div>
+            <div class="line2">
+                <a ><p><img src="./svg/eos-icons_project-outlined.svg"/> Project Management </p></a>
+                <a ><p><img src="./svg/ph_code-bold.svg"/> Coding </p></a>
+                <a ><p><img src="./svg/grommet-icons_money.svg"/> Investment </p></a>
+            </div>
+        <br>
+        <div class="para">
+            <p>Driven by a passion for innovation and client success, I’m a seasoned professional with over 9 years of experience, specializing in project management. With a proven track record of leadership and collaboration.</p>
+        </div>
+        <br>
+        <div class="contact">
+            <h3>Contact</h3>
+             <table style="width:100%">
+                <tr>
+                  <th><img src="./svg/circum_linkedin.svg"/>Linkedin</th>
+                  <td>#NamanNarayan</td>
+                </tr>
+                <tr>
+                  <th><img src="./svg/ph_globe-light.svg"/>Website</th>
+                  <td>www.Naman.com</td>
+                </tr>
+                <tr>
+                  <th><img src="./svg/ph_phone-light.svg"/>Phone</th>
+                  <td>0123-456-789</td>
+                </tr>
+                <tr>
+                  <th><img src="./svg/ph_envelope-light.svg"/>Email</th>
+                  <td>Naman@techcurve.co</td>
+                </tr>
+                <tr>
+                  <th><img src="./svg/Vector.svg"/>Address</th>
+                  <td>Ocean tower 2, Unit 23 floor, 75/46 Sukhumvit 19 (Wattana), Sukhumvit Road, North Klongtoey, Wattana, Bangkok 10110.</td>
+                </tr>
+              </table>
+        </div>
+    </div>
+
+    <!-- Modal form -->
+    <div class="modal fade" id="popupForm" tabindex="-1" role="dialog" aria-labelledby="popupFormLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" style="color: black;">&times;</span>
+                </button>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="popupFormLabel">Welcome to E-Business Card  </h5>
+                    <h4 style="font-weight: 800;font-size:24px;line-height:28.8px;color:black;">Please provide information to save contact</h4>
+                    
+                </div>
+                <div class="modal-body">
+                    <form id="userForm">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="tel" class="form-control" id="phoneNumber" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" class="form-control" id="company" required>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Continue</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let button = document.getElementById("generatePDF");
+        let makepdf = document.getElementById("makepdf");
+        
+        button.addEventListener("click", function () {
+            $('#popupForm').modal('show');
+        });
+
+        //form submission
+        document.getElementById("userForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            //localStorage
+            localStorage.setItem("firstName", document.getElementById("firstName").value);
+            localStorage.setItem("lastName", document.getElementById("lastName").value);
+            localStorage.setItem("phoneNumber", document.getElementById("phoneNumber").value);
+            localStorage.setItem("company", document.getElementById("company").value);
+            localStorage.setItem("email", document.getElementById("email").value);
+
+            // Generate PDF
+            html2pdf().from(makepdf).save();
+
+            // Clear form fields
+            document.getElementById("userForm").reset();
+
+            // Close modal
+            $('#popupForm').modal('hide');
+            setTimeout(function() {
+                window.location.href = "app.html";
+            }, 2000); // the delay time 
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
